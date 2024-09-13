@@ -827,7 +827,7 @@ public:
         this->declare_parameter<int>("max_iteration", 4);
         this->declare_parameter<string>("map_file_path", "");
         this->declare_parameter<string>("common.lid_topic", "/livox/lidar");
-        this->declare_parameter<string>("common.imu_topic", "/livox/imu");
+        this->declare_parameter<string>("common.imu_topic", "/livox/imu_transformed");
         this->declare_parameter<bool>("common.time_sync_en", false);
         this->declare_parameter<double>("common.time_offset_lidar_to_imu", 0.0);
         this->declare_parameter<double>("filter_size_corner", 0.5);
@@ -863,7 +863,7 @@ public:
         this->get_parameter_or<int>("max_iteration", NUM_MAX_ITERATIONS, 4);
         this->get_parameter_or<string>("map_file_path", map_file_path, "");
         this->get_parameter_or<string>("common.lid_topic", lid_topic, "/livox/lidar");
-        this->get_parameter_or<string>("common.imu_topic", imu_topic,"/livox/imu");
+        this->get_parameter_or<string>("common.imu_topic", imu_topic,"/livox/imu_transformed");
         this->get_parameter_or<bool>("common.time_sync_en", time_sync_en, false);
         this->get_parameter_or<double>("common.time_offset_lidar_to_imu", time_diff_lidar_to_imu, 0.0);
         this->get_parameter_or<double>("filter_size_surf",filter_size_surf_min,0.5);
